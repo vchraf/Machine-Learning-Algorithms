@@ -6,6 +6,7 @@ from torchvision import transforms
 import torch.nn.functional as F
 from torch.autograd import Variable
 
+
 class LeNet(nn.Module):
   
   def __init__(this):

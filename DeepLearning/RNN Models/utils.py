@@ -83,4 +83,3 @@ def load_corpus(src, max_tokens=-1):
 
 
 corpus, vocab = load_corpus(src_tm)
-

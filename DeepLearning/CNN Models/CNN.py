@@ -7,6 +7,7 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 from torch.nn.modules import padding
 
+
 class CNN(nn.Module):
   def __init__(this,nbr_classes):
       super(CNN, this).__init__()
