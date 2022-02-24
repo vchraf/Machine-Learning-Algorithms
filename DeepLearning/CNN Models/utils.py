@@ -36,7 +36,7 @@ def plot(X, Y=None, xlabel=None, ylabel=None, legend=[],
         return (hasattr(X, "ndim") and X.ndim == 1 or isinstance(X, list) and not hasattr(X[0], "__len__"))
 
     if isHas1axis(X): X = [X]
-    if Y is None: Y = [[]*len(X)]
+    if Y is None: X, Y = [[]] * len(X), X
     if isHas1axis(Y):Y = [Y]
     if len(X) != len(Y): X = X * len(Y)
 
