@@ -1,7 +1,14 @@
-from email import utils
 import numpy as np
-from ...utils.utils import batch_iterator
+# from ...utils.utils import batch_iterator
 
+def batch_iterator(X, y=None, batch_size=64):
+  n_samples = X.shape[0]
+  for i in np.arange(0, n_samples, batch_size):
+    begin, end = i, min(i+batch_size, n_samples)
+    if y is not None:
+      yield X[begin:end], y[begin:end]
+    else:
+      yield X[begin:end]
 
 class NN():
   def __init__(this, optimizer, loss, validationData = None):
