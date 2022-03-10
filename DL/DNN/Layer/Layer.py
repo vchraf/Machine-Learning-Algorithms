@@ -5,3 +5,4 @@ class Layer(object):
   def forwardPass(this, X, training): raise NotImplementedError()
   def backwardPass(this, accumGrad): raise NotImplementedError()
   def outputShape(this): raise NotImplementedError()
+
