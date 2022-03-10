@@ -1,18 +1,15 @@
 import numpy as np
 
-from DL.DNN import NN
+from DL.DNN.NN import NN
 from DL.DNN.Optimisation.Adam import Adam
-from DL.DNN.Layer import Dense, Activation
-from DL.DNN.Loss import SquareLoss
+from DL.DNN.Layer.Dense import Dense
+from DL.DNN.Layer.Activation import Activation 
+from DL.DNN.Loss.SquareLoss import SquareLoss
 
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 
-def oneHot(x, nbrCol=None):
-  if not nbrCol: nbrCol = np.max(x) + 1
-  one_hot = np.zeros((x.shape[0], nbrCol))
-  one_hot[np.arange(x.shape[0]), x] = 1
-  return one_hot
+from utils.utils import oneHot
 
 data = datasets.load_digits()
 X = data.data

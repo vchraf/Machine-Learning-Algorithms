@@ -1,6 +1,7 @@
 import numpy as np
 from .Layer import Layer
-from .ActivationFun import ReLU, Sigmoid
+from .ActivationFun.Sigmoid import Sigmoid 
+from .ActivationFun.ReLU import ReLU
 class Activation(Layer):  
   def __init__(this, name):
       activation_functions = {'relu': ReLU, 'sigmoid': Sigmoid}
