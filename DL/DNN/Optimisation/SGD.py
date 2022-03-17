@@ -1,16 +1,16 @@
 import numpy as np
 
 class StochasticGradientDescent():
-    def __init__(self, learning_rate=0.01, momentum=0):
-        self.learning_rate = learning_rate 
-        self.momentum = momentum
-        self.w_updt = None
+    def __init__(this, learning_rate=0.01, momentum=0):
+        this.learning_rate = learning_rate 
+        this.momentum = momentum
+        this.w_updt = None
 
-    def update(self, w, grad_wrt_w):
+    def update(this, w, grad_wrt_w):
         # If not initialized
-        if self.w_updt is None:
-            self.w_updt = np.zeros(np.shape(w))
+        if this.w_updt is None:
+            this.w_updt = np.zeros(np.shape(w))
         # Use momentum if set
-        self.w_updt = self.momentum * self.w_updt + (1 - self.momentum) * grad_wrt_w
+        this.w_updt = this.momentum * this.w_updt + (1 - this.momentum) * grad_wrt_w
         # Move against the gradient to minimize loss
-        return w - self.learning_rate * self.w_updt
+        return w - this.learning_rate * this.w_updt
