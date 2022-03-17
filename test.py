@@ -1,10 +1,10 @@
 import numpy as np
 
-from DL.DNN.NN import NN
-from DL.DNN.Optimisation.Adam import Adam
-from DL.DNN.Layer.Dense import Dense
-from DL.DNN.Layer.Activation import Activation 
-from DL.DNN.Loss.SquareLoss import SquareLoss
+import NN
+from NN.Optimisation.Adam import Adam
+from NN.Layer.Dense import Dense
+from NN.Layer.Activation import Activation 
+from NN.Loss.SquareLoss import SquareLoss
 
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
