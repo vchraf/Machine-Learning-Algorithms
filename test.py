@@ -26,3 +26,5 @@ mlp.add(Activation('relu'))
 mlp.add(Dense(10))
 mlp.add(Activation('sigmoid'))
 train_err, val_err = mlp.fit(X_train, y_train, n_epochs=50, batch_size=256)
+
+    # 13 69 141 209
