@@ -1,6 +1,6 @@
 import numpy as np
 from utils.utils import batch_iterator
-#comm
+#com
 class NN():
   def __init__(this, optimizer, loss, validationData = None):
     this.optimizer  = optimizer
